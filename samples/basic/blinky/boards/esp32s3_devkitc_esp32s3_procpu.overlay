@@ -1,0 +1,15 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+  leds {
+    compatible = "gpio-leds";
+    led0: user_led_0 {
+      gpios = <&gpio0 38 GPIO_ACTIVE_LOW>;
+      label = "User LED";
+    };
+  };
+
+  aliases {
+    led0 = &led0;
+  };
+};
